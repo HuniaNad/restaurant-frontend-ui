@@ -1,0 +1,7 @@
+.app__subheading {
+    margin-bottom: 1rem;
+}
+
+.app__subheading p::first-letter {
+    text-transform: uppercase;
+}
