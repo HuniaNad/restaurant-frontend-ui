@@ -13,7 +13,7 @@
     margin: 2rem 0;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: row;
 }
 
@@ -40,6 +40,7 @@
 .app__specialMenu-menu_img img {
     width: 100%;
     height: auto;
+    object-fit: contain;
 }
 
 .app__specialMenu-menu_items {
@@ -81,6 +82,10 @@
 @media screen and (max-width: 650px) {
     .app__specialMenu-menu_img {
         width: 100%;
+    }
+
+    .app__specialMenu-menu_img img {
+        height: auto;
     }
 
     .app__specialMenu-menu_heading {
