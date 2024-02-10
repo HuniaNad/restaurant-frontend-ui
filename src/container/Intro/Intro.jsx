@@ -1,5 +1,5 @@
 import React from 'react';
-import { BsPlayCircle, BsPauseCircle } from 'react-icons/bs';
+import { BsPlayFill, BsPauseFill } from 'react-icons/bs';
 
 import { meal } from '../../constants';
 import './Intro.css';
@@ -34,8 +34,8 @@ const Intro = () => {
 
         {playVideo 
         ? (
-          <BsPauseCircle color="#fff" fontSize={30} /> 
-          ) : <BsPlayCircle color="#fff" fontSize={30} />
+          <BsPauseFill color="#fff" fontSize={30} /> 
+          ) : <BsPlayFill color="#fff" fontSize={30} />
         }
 
       </div>
