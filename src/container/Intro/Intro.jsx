@@ -11,26 +11,30 @@ const Intro = () => {
   const handleVideo = () => {
     setPlayVideo( (prevPlayVideo) => !prevPlayVideo )
 
+    let videoOverlay = document.getElementsByClassName("app__video-overlay")[0]
+
     if(playVideo) {
+      videoOverlay.classList.remove("play")
       vidRef.current.pause()
     } else {
+      videoOverlay.classList.add("play")
       vidRef.current.play()
     }
   }
   
   return (
   <div className='app__video'>
-    <video 
+    <video
       src={meal} 
       ref={vidRef}
       typeof='video/mp4'
       loop
-      controls="false"
+      controls={false}
       muted      
     />
 
-    <div className="app__video-overlay flex__center">
-      <div className="app__video-overlay_circle flex__center" onClick={handleVideo}>
+    <div className="app__video-overlay flex__center" onClick={handleVideo}>
+      <div className="app__video-overlay_circle flex__center">
 
         {playVideo 
         ? (
